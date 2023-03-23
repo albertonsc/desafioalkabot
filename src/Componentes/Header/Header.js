@@ -6,7 +6,7 @@ export default function Header () {
         <>
         <C.containerHeader>
             <div>
-            <h3>TESTE DE CÓDIGO</h3>
+            <h3>BLOG</h3>
             </div>
         </C.containerHeader>
         </>

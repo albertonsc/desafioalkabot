@@ -9,8 +9,8 @@ export const ContainerCard = Style.div`
     background-color: #82A6B1;
     max-width: 800px;
         :hover{
-            transform: scale(1.05);
-            transition: .5s;
+            transition: .25s;
+            box-shadow: 0 2px 20px 0 rgba(0,0,0, 0.50);
         }
     
 
@@ -40,3 +40,4 @@ export const postCard=Style.div`
     justify-content: flex-end;
 }
 `;
+
