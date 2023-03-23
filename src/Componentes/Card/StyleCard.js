@@ -3,7 +3,7 @@ import Style from 'styled-components'
 export const ContainerCard = Style.div`
     border: 1px solid #C3C3C3;
     border-radius: 8px;
-    box-shadow: 0 2px 7px 0 rgba(0,0,0, 0.15);
+    box-shadow: 0 2px 7px 0 rgba(0,0,0, 0.35);
     padding: 15px;
     margin: 15px auto;
     background-color: #82A6B1;
@@ -38,9 +38,10 @@ export const comentsCard=Style.div`
         
     }
 
-    button{
+    a{
         text-decoration: none;
         color: #000;
+        background-color: #fff;
         border: 1px solid #000;
         padding: 5px 10px;
         border-radius: 20px;

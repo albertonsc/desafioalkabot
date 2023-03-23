@@ -3,7 +3,7 @@ import * as C from './StyleCard'
 
 export default function Card (props){
 
-  let comentarios = props.coments;
+  let post = props.postagem;
 
 
     return(
@@ -14,17 +14,17 @@ export default function Card (props){
 
             <C.postCard>
               <div>
-                  <p> {props.post}</p>
+                  <p> {post.post}</p>
               </div>
             </C.postCard>
 
             <footer>
               <C.comentsCard>
                 <div>
-                  <button type="button">
-                    {comentarios.length>0 ? <span>{comentarios.length}</span> : <span>0</span>} {}
-                    {comentarios.length===1 ? "comentário" : "comentários"} 
-                  </button>
+                  <a href="/" target="_blank">
+                    {post.coments.length>0 ? <span>{post.coments.length}</span> : <span>0</span>} {}
+                    {post.coments.length===1 ? "comentário" : "comentários"} 
+                  </a>
                 </div>
               </C.comentsCard>
             </footer>
