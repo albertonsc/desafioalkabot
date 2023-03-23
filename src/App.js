@@ -16,7 +16,7 @@ useEffect(()=>{
 });
 }, []);
 
-
+//console.log(postagem)
 
 //console.log(postagem)
 

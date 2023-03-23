@@ -1,50 +1,38 @@
-import React, { useState, useEffect } from 'react';
-import * as C from './StyleCard'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import * as C from './StyleCard'
+import ComentPost from './Coments/coments'
 
 
 export default function Card (props){
 
-  const idpost = props.postagem.id
+  const idPost = props.postagem.id
   const [coments, setComents] = useState([]);
-
+  
   useEffect(()=>{
-    axios.get('https://jsonplaceholder.typicode.com/posts/'+{idpost}+'/comments')
-    .then((response)=>{
+      axios.get('https://jsonplaceholder.typicode.com/posts/'+{idPost}+'/comments')
+      .then((response)=>{
       setComents(response.data);
-    });
+      });
   }, []);
+      
 
-
+console.log(coments)
 
 
     return(
 
       <>
         <C.ContainerCard>
-          <div>
-
             <C.postCard>
               <div>
                   <h3>{props.postagem.title}</h3>
                   <p>{props.postagem.body}</p>
-                  <p>{"id:" + props.postagem.id}</p>
-                  <p>{"UserId:" + props.postagem.userId}</p>
+              </div>
+              <div>
+                {coments.map((coments)=> (<ComentPost coments={coments}/>))}
               </div>
             </C.postCard>
-
-            <footer>
-              <C.comentsCard>
-                <div>
-                  <a href="/" target="_blank">
-                    {1>0 ? <span>{0}</span> : <span>0</span>} {}
-                    {1===1 ? "comentário" : "comentários"} 
-                  </a>
-                </div>
-              </C.comentsCard>
-            </footer>
-
-          </div>
         </C.ContainerCard>
       </>
     );
