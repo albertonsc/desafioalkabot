@@ -1,7 +1,22 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import * as C from './StyleCard'
+import axios from 'axios'
+
 
 export default function Card (props){
+
+  const idpost = props.postagem.id
+  const [coments, setComents] = useState([]);
+
+  useEffect(()=>{
+    axios.get('https://jsonplaceholder.typicode.com/posts/'+{idpost}+'/comments')
+    .then((response)=>{
+      setComents(response.data);
+    });
+  }, []);
+
+
+
 
     return(
 
@@ -13,6 +28,8 @@ export default function Card (props){
               <div>
                   <h3>{props.postagem.title}</h3>
                   <p>{props.postagem.body}</p>
+                  <p>{"id:" + props.postagem.id}</p>
+                  <p>{"UserId:" + props.postagem.userId}</p>
               </div>
             </C.postCard>
 

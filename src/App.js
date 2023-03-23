@@ -8,7 +8,6 @@ import axios from 'axios'
 
 function App() {
 const [postagem, setPostagem] = useState([]);
-const [coments, setComents] = useState([]);
 
 useEffect(()=>{
   axios.get('https://jsonplaceholder.typicode.com/posts')
@@ -17,15 +16,9 @@ useEffect(()=>{
 });
 }, []);
 
-useEffect(()=>{
-  axios.get('https://jsonplaceholder.typicode.com/posts/2/comments')
-  .then((response)=>{
-    setComents(response.data);
-  });
-}, []);
 
-console.log(postagem)
-console.log(coments)
+
+//console.log(postagem)
 
   return (
     <>
