@@ -7,18 +7,31 @@ import axios from 'axios'
 
 
 function App() {
+const [postagem, setPostagem] = useState([]);
+const [coments, setComents] = useState([]);
 
-  const [postagem, setPostagem] = useState([]);
 useEffect(()=>{
-  axios.arguments('')
+  axios.get('https://jsonplaceholder.typicode.com/posts')
+  .then((response)=>{
+    setPostagem(response.data);
 });
-  
+}, []);
+
+useEffect(()=>{
+  axios.get('https://jsonplaceholder.typicode.com/posts/2/comments')
+  .then((response)=>{
+    setComents(response.data);
+  });
+}, []);
+
+console.log(postagem)
+console.log(coments)
 
   return (
     <>
       <GlobalStyle />
       <Header />
-      <Card postagem={postagem}/>
+      {postagem.map((postagem)=>(<Card postagem={postagem} />))}
       <Footer />
     </>
   );
