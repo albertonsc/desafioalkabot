@@ -19,7 +19,7 @@ npm start
 
 A aplicação também está disponível em: https://desafio-alkabot-alberto.netlify.app/
 
-# Getting Started with Create React App
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
