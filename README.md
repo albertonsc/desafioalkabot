@@ -1,4 +1,4 @@
-Após blonar o código na sua máquina, use os seguintes codigos no terminal:
+Após clonar o código na sua máquina, use os seguintes codigos no terminal:
 
 
     npm install
