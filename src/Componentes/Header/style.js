@@ -1,6 +1,6 @@
-import Style from 'styled-components'
+import Style from "styled-components";
 
-export const containerHeader=Style.div`
+export const containerHeader = Style.div`
     text-align: center;
     background-color: #76877D;
     padding: 10px;

@@ -9,9 +9,8 @@ function App() {
   const [postagem, setPostagem] = useState([]);
 
   useEffect(() => {
-    axios.get("https://jsonplaceholder.typicode.com/posts")
-    .then((response) => {
-    setPostagem(response.data);
+    axios.get("https://jsonplaceholder.typicode.com/posts").then((response) => {
+      setPostagem(response.data);
     });
   }, []);
 
@@ -23,7 +22,6 @@ function App() {
         <Card postagem={postagem} />
       ))}
       <Footer />
-
     </>
   );
 }

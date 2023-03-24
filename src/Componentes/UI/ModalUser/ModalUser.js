@@ -1,12 +1,17 @@
 import React from "react";
-import * as C from "./styleModal";
+import ReactDOM from 'react-dom'
+import * as C from "./styleModalUSer";
+
+const portalRoot = document.getElementById('portal-root')
+
+
 
 export default function UIModal({ children, isOpen, onClickClose }) {
   if (!isOpen) {
     return null;
   }
 
-  return (
+  return  ReactDOM.createPortal(
     <C.uiModalOverlay>
       <C.uiModal>
         <div>
@@ -20,6 +25,7 @@ export default function UIModal({ children, isOpen, onClickClose }) {
           {children}
         </div>
       </C.uiModal>
-    </C.uiModalOverlay>
+    </C.uiModalOverlay>,
+  portalRoot
   );
 }

@@ -1,14 +1,28 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import ComentPost from "./Coments/coments";
+import Usuario from "./User/Usuario.js";
 import * as C from "./StyleCard";
 import UIMdodal from "../UI/Modal/modal";
 
 export default function Card(props) {
   const [coments, setComents] = useState([]);
-  const [cont, setCont] = useState(null);
+  const [user, setUser] = useState([]);
+  const [cont, setCont] = useState(null); //para controlar o Modal
 
-  const msg = () => {
+  const userId = props.postagem.userId;
+
+  useEffect(() => {
+    //GET User
+    axios
+      .get("https://jsonplaceholder.typicode.com/users/" + userId)
+      .then((response) => {
+        setUser(response.data);
+      });
+  }, []);
+
+  // GET Coments
+  const cmt = () => {
     axios
       .get(
         "https://jsonplaceholder.typicode.com/posts/" +
@@ -19,32 +33,33 @@ export default function Card(props) {
         setComents(response.data);
       });
 
-      setCont(true)
+    setCont(true);
   };
 
   return (
     <>
       <C.ContainerCard>
+            <Usuario user={user} />
+        
         <C.postCard>
-          <div onClick={msg} >
-            <h3>{props.postagem.title}</h3>
+          <div onClick={cmt}>
+            <h3>Título: {props.postagem.title}</h3>
             <p>{props.postagem.body}</p>
-            <span>
-              {coments.length > 0
-                ? coments.length + " Comentários"
-                : "Clique para ver os comentários"}
-            </span>
           </div>
+          <p className="Stylecoment">
+          {cont == null
+            ? "Clique para ver os comentários"
+            : coments.length + " comentários"}
+        </p>
         </C.postCard>
+        
+
+        <UIMdodal isOpen={Boolean(cont)} onClickClose={() => setCont(null)}>
+          {coments.map((coments) => (
+            <ComentPost coments={coments} />
+          ))}
+        </UIMdodal>
       </C.ContainerCard>
-
-      
-
-      <UIMdodal isOpen={Boolean(cont)} onClickClose={()=> setCont(null)}>
-      {coments.map((coments) => (
-        <ComentPost coments={coments} />
-      ))}
-      </UIMdodal>
     </>
   );
 }

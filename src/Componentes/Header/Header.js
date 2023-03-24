@@ -1,14 +1,14 @@
-import React from 'react';
-import * as C from './style'
+import React from "react";
+import * as C from "./style";
 
-export default function Header () {
-    return(
-        <>
-        <C.containerHeader>
-            <div>
-            <h3>BLOG</h3>
-            </div>
-        </C.containerHeader>
-        </>
-    )
+export default function Header() {
+  return (
+    <>
+      <C.containerHeader>
+        <div>
+          <h3>BLOG</h3>
+        </div>
+      </C.containerHeader>
+    </>
+  );
 }
