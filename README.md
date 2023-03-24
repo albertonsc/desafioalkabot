@@ -8,7 +8,12 @@ Após blonar o código, use os seguintes codigos no terminal:
     npm install axios
     
 
-Agora é só dar um npm start para rodar a aplicação.
+Agora, para rodar a aplicação no seu browser é só digitar no terminal:
+
+
+npm start
+
+
 
 A aplicação também está disponível em: https://desafio-alkabot-alberto.netlify.app/
 
