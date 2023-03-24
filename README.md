@@ -1,4 +1,5 @@
 Após blonar o código, use os seguintes codigos no terminal:
+
     npm install
     
     npm install styled-componets
