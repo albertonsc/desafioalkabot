@@ -1,11 +1,11 @@
-Após blonar o código, use os seguintes codigos no terminal:
+Após blonar o código na sua máquina, use os seguintes codigos no terminal:
 
 
     npm install
     
-    npm install styled-componets
+    npm i styled-components
     
-    npm install axios
+    npm i axios
     
 
 Agora, para rodar a aplicação no seu browser é só digitar no terminal:
@@ -13,6 +13,7 @@ Agora, para rodar a aplicação no seu browser é só digitar no terminal:
 
 
 npm start
+
 
 
 
