@@ -7,8 +7,8 @@ export const ContainerCard = Style.div`
     padding: 15px 25px;
     margin: 15px auto 5px auto;
     background-color: #fefefe;
-
-    max-width: 650px;
+    width: 600px;
+    max-width: 80%;
     min-height: 250px;
         :hover{
             transition: .25s;
