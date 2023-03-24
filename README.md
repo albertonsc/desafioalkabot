@@ -1,10 +1,12 @@
 Após blonar o código, use os seguintes codigos no terminal:
 
+
     npm install
     
     npm install styled-componets
     
     npm install axios
+    
 
 Agora é só dar um npm start para rodar a aplicação.
 
