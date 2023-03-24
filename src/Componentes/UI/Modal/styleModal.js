@@ -25,7 +25,5 @@ button{
     :hover{
         background-color: #eff3ea;
     }
-    
 }
-  
 `;

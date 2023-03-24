@@ -6,5 +6,4 @@ export const containerHeader = Style.div`
     padding: 15px;
     width: 100%;
     color: #000;
-
 `;

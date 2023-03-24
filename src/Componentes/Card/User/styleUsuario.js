@@ -1,6 +1,6 @@
-import style from 'styled-components'
+import style from "styled-components";
 
-export const ContainerUser=style.div`
+export const ContainerUser = style.div`
     width: 170px;
     margin-left: 0;
     border: unset;
@@ -10,20 +10,20 @@ export const ContainerUser=style.div`
     display: flex;
     align-items: center;
     justify-content: flex-start;
-:hover{
-        cursor: pointer;
-        transition: .5s;
+        :hover{
+            cursor: pointer;
+            transition: .5s;
    }
 
-   img{
+img{
     width: 40px;
     border: unset;
     border-radius: 50px;
     margin: 0px;
-   }
+}
 
-   .StyleNameUser{
+.StyleNameUser{
     color:#708090;
     font-size: 15px;
-   }
+}
 `;
