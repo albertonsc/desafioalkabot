@@ -10,11 +10,11 @@ export const ContainerComent = Style.div`
     display: flex;
 
     h4{
-        font-size:12px;
+        font-size:15px;
     }
 
     p{
-        font-size: 12px;
+        font-size: 15px;
     }
     img{
         width: 25px;
