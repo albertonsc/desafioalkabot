@@ -23,4 +23,9 @@ export const ContainerUser=style.div`
     border-radius: 50px;
     margin: 0px;
    }
+
+   .StyleNameUser{
+    color:#708090;
+    font-size: 15px;
+   }
 `;

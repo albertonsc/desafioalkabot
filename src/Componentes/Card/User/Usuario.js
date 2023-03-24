@@ -23,7 +23,8 @@ export default function Usuario(props) {
           <img src={ImgUser} alt="user" />
         </div>
         <div>
-          <h4 >{props.user.name}</h4>
+          <h4>{props.user.name}</h4>
+          <p className="StyleNameUser">@{props.user.username}</p>
         </div>
       </C.ContainerUser>
 
