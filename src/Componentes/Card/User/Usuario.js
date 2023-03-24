@@ -38,7 +38,6 @@ export default function Usuario(props) {
         Telefone: {phone}
         <br />
         Website: {website}
-        <br />
       </UIModal>
     </>
   );

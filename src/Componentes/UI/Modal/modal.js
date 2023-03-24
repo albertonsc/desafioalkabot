@@ -13,7 +13,7 @@ export default function UIModal({ children, isOpen, onClickClose }) {
           <C.uiModalButton>
             <div>
               <button type="button" onClick={onClickClose}>
-                X
+                <span className="styleX">X</span>
               </button>
             </div>
           </C.uiModalButton>

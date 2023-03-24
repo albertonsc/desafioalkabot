@@ -12,13 +12,19 @@ padding: 15px;
 `;
 
 export const uiModalButton = style.div`
+
 button{
 
     float: right;
     background-color: unset;
     border: unset;
+    border-radius: 15px;
     font-size: 15px;
+    padding: 5px 7px;
+    :hover{
+        background-color: #eff3ea;
+    }
     
 }
-    
+  
 `;
