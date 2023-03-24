@@ -11,6 +11,7 @@ Após blonar o código, use os seguintes codigos no terminal:
 Agora, para rodar a aplicação no seu browser é só digitar no terminal:
 
 
+
 npm start
 
 
