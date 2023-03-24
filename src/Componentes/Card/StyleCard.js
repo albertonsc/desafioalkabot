@@ -5,8 +5,9 @@ export const ContainerCard = Style.div`
     border-radius: 8px;
     box-shadow: 0 2px 7px 0 rgba(0,0,0, 0.35);
     padding: 15px 25px;
-    margin: 15px auto;
+    margin: 15px auto 5px auto;
     background-color: #fefefe;
+
     max-width: 650px;
     min-height: 250px;
         :hover{
