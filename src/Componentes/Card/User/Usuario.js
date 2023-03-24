@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import * as C from "./styleUsuario";
 import UIModal from "../../UI/ModalUser/ModalUser";
+import ImgUser from "../../../assets/user.png";
 
 export default function Usuario(props) {
   const nameUser = JSON.stringify(props.user.name);
@@ -17,19 +18,26 @@ export default function Usuario(props) {
 
   return (
     <>
-      <C.ContainerUser>
+      <C.ContainerUser onClick={atv}>
         <div>
-          <p onClick={atv}>{props.user.name}</p>
+          <img src={ImgUser} alt="user" />
+        </div>
+        <div>
+          <h4 >{props.user.name}</h4>
         </div>
       </C.ContainerUser>
 
       <UIModal isOpen={Boolean(btn)} onClickClose={() => setBtn(null)}>
         <h4>Dados do usuário: </h4>
-        Nome: {nameUser}<br/>
-        Nome de usuário: {username} <br/>
-        E-mail: {email}<br/>
-        Telefone: {phone}<br/>
-        Website: {website}<br/>
+        Nome: {nameUser}
+        <br />
+        Nome de usuário: {username} <br />
+        E-mail: {email}
+        <br />
+        Telefone: {phone}
+        <br />
+        Website: {website}
+        <br />
       </UIModal>
     </>
   );

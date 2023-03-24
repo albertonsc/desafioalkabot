@@ -6,7 +6,7 @@ export const ContainerCard = Style.div`
     box-shadow: 0 2px 7px 0 rgba(0,0,0, 0.35);
     padding: 15px 25px;
     margin: 15px auto;
-    background-color: #e2e2e2;
+    background-color: #fefefe;
     max-width: 650px;
     min-height: 250px;
         :hover{
@@ -22,7 +22,7 @@ export const postCard = Style.div`
     h3{
         color: #77767c;
         font-size: 20px;
-        padding: 10px 0px;
+        padding: 10px 0px 0px 0px  ;
     }
     p{
         font-size: 18px;

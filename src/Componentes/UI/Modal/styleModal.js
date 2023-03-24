@@ -1,13 +1,12 @@
 import style from "styled-components";
 
 export const uiModalOverlay = style.div`
-width: 90;
-background-color: rgba(0,0,0, 0.25);
+
 `;
 
 export const uiModal = style.div`
-background-color: #fff;
-border-radius: 5px;
+background-color: #fffbf4;
+border-radius: 8px;
 max-width: 800px;
 padding: 15px;
 `;

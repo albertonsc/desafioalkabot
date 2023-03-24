@@ -19,7 +19,7 @@ export default function Card(props) {
       .then((response) => {
         setUser(response.data);
       });
-  }, []);
+  },[]);
 
   // GET Coments
   const cmt = () => {
