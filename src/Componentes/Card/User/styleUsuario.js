@@ -6,12 +6,14 @@ export const ContainerUser=style.div`
     border: unset;
     border-radius: 8px;
     padding: 2px 10px;
-    background-color: rgba(255,255,255, .3);
+    background-color: rgba(255,255,255, .5);
     margin-bottom: 10px;
     font-size: 15px;
     text-align: center;
 :hover{
         cursor: pointer;
-        background-color: rgba(255,255,255)
+        background-color: rgba(255,255,255);
+        transition: .5s;
    }
+
 `;

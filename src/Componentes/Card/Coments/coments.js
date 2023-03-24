@@ -6,9 +6,8 @@ export default function ComentPost(props) {
     <>
       <C.ContainerComent>
         <div>
-          <h4>Comentário: {props.coments.body}</h4>
-          <p>Usuário: {props.coments.name} </p>
-          <p>E-mail: {props.coments.email}</p>
+          <p>{props.coments.name}: </p>
+          <h4>{props.coments.body}</h4>
         </div>
       </C.ContainerComent>
     </>

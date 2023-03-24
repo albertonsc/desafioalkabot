@@ -6,7 +6,7 @@ export const ContainerCard = Style.div`
     box-shadow: 0 2px 7px 0 rgba(0,0,0, 0.35);
     padding: 15px 25px;
     margin: 15px auto;
-    background-color: #82A6B1;
+    background-color: #e2e2e2;
     max-width: 650px;
     min-height: 250px;
         :hover{
@@ -20,7 +20,7 @@ export const ContainerCard = Style.div`
 export const postCard = Style.div`
 
     h3{
-        color: #000;
+        color: #77767c;
         font-size: 20px;
         padding: 10px 0px;
     }
@@ -28,15 +28,15 @@ export const postCard = Style.div`
         font-size: 18px;
         text-align: justify;
         padding: 10px 0px ;
-        color: #fff;
+        color: #000;
         margin-bottom:50px;
 }
 p.Stylecoment{
     text-align: end;
-    color: #000050;
+    color: #505050;
     font-size: 15px;
-    opacity: 0.5;
     margin-bottom: 0px;
+    
 }
 
 `;
