@@ -21,6 +21,7 @@ button{
     border-radius: 15px;
     font-size: 15px;
     padding: 5px 7px;
+    color: #000;
     :hover{
         background-color: #eff3ea;
     }
