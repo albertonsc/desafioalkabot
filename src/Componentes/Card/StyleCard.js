@@ -29,13 +29,14 @@ export const postCard = Style.div`
         text-align: justify;
         padding: 10px 0px ;
         color: #fff;
+        margin-bottom:50px;
 }
 p.Stylecoment{
-    margin-top: 25px;
     text-align: end;
     color: #000050;
     font-size: 15px;
     opacity: 0.5;
+    margin-bottom: 0px;
 }
 
 `;

@@ -39,20 +39,18 @@ export default function Card(props) {
   return (
     <>
       <C.ContainerCard>
-            <Usuario user={user} />
-        
+        <Usuario user={user} />
         <C.postCard>
           <div onClick={cmt}>
-            <h3>Título: {props.postagem.title}</h3>
+            <h3>Título: {props.postagem.title} </h3>
             <p>{props.postagem.body}</p>
+            <p className="Stylecoment">
+              {cont == null
+                ? "Clique para ver os comentários"
+                : coments.length + " comentários"}
+            </p>
           </div>
-          <p className="Stylecoment">
-          {cont == null
-            ? "Clique para ver os comentários"
-            : coments.length + " comentários"}
-        </p>
         </C.postCard>
-        
 
         <UIMdodal isOpen={Boolean(cont)} onClickClose={() => setCont(null)}>
           {coments.map((coments) => (
